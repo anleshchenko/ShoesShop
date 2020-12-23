@@ -1,0 +1,17 @@
+{% extends 'main/base-template.html' %}
+{% load i18n static %}
+
+{% block title %}
+{% trans 'UpdateItem' %}
+{% endblock title %}
+
+{% block content %}
+<h3>{% trans 'UpdateItem' %}</h3>
+{{ id }}
+<form method="POST" action="">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" class="btn btn-success" value="{% trans 'ChangeData' %}">
+</form>
+
+{% endblock content %}

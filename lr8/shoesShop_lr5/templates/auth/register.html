@@ -1,0 +1,59 @@
+{% extends 'auth/base.html' %}
+{% load i18n static %}
+
+{% block title %}
+{% trans 'Registration' %}
+{% endblock title %}
+
+{% block content %}
+
+<div class="container-fluid h-100">
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col col-sm-6 col-md-4 col-lg-4 col-xl-3">
+            <h3 class="text-center">{% trans 'Registration' %}</h3>
+            <form method="POST" action="">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label>{{ form.username.label }}</label>
+                    {{ form.username }}
+                </div>
+                <div class="form-group">
+                    <label>{{ form.email.label }}</label>
+                    {{ form.email }}
+                </div>
+                <div class="form-group">
+                    <label>{{ form.password1.label }}</label>
+                    {{ form.password1 }}
+                </div>
+                <div class="form-group">
+                    <label>{{ form.password2.label }}</label>
+                    {{ form.password2 }}
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary btn-block" value="{% trans 'Register' %}">
+                </div>
+                <div class="form-group">
+                    <p class="text-center">{% trans 'AlreadyHaveAccount' %}? <a href="{% url 'login' %}">{% trans 'Login' %}</a></p>
+                </div>
+            </form>
+            {% if form.errors %}
+            <div class="alert alert-danger">{{form.errors}}</div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<script>
+    var form_fields = document.getElementsByTagName('input')
+    form_fields[1].placeholder = "{% trans 'InputUserName' %}";
+    form_fields[2].placeholder = "{% trans 'InputEmail' %}";
+    form_fields[3].placeholder = "{% trans 'InputPassword' %}";
+    form_fields[4].placeholder = "{% trans 'RepeatPassword' %}";
+
+
+    for (var field in form_fields) {
+        form_fields[field].className += ' form-control'
+    }
+</script>
+
+{% endblock content %}

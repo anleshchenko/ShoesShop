@@ -1,0 +1,50 @@
+{% extends 'auth/base.html' %}
+{% load i18n static %}
+
+{% block title %}
+{% trans 'Login' %}
+{% endblock title %}
+
+{% block content %}
+
+<div class="container-fluid h-100">
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col col-sm-6 col-md-4 col-lg-4 col-xl-3">
+            {% if messages %}
+                {% for message in messages %}
+                    <p class="alert alert-info text-center" id="messages">{{message}}</p>
+                {% endfor %}
+            {% endif %}
+            <h3 class="text-center">{% trans 'Login' %}</h3>
+            <form method="POST" action="">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label>{{ form.username.label }}</label>
+                    {{ form.username }}
+                </div>
+                <div class="form-group">
+                    <label>{{ form.password1.label }}</label>
+                    {{ form.password1 }}
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary btn-block" value="{% trans 'Login' %}">
+                </div>
+                <div class="form-group">
+                    <p class="text-center">{% trans 'NoAccount' %} <a href="{% url 'register' %}">{% trans 'Register' %}</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    var form_fields = document.getElementsByTagName('input')
+    form_fields[1].placeholder = "{% trans 'InputUserName' %}";
+    form_fields[2].placeholder = "{% trans 'InputPassword' %}";
+
+    for (var field in form_fields) {
+        form_fields[field].className += ' form-control'
+    }
+</script>
+
+{% endblock content %}

@@ -1,0 +1,194 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-22 20:02+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\main\models.py:12 .\main\models.py:44 .\templates\main\index.html:19
+msgid "Manufacturer"
+msgstr "Виробник"
+
+#: .\main\models.py:13 .\main\views.py:111
+#: .\templates\main\base-template.html:50
+msgid "Manufacturers"
+msgstr "Виробники"
+
+#: .\main\models.py:17
+#, fuzzy
+#| msgid "Color"
+msgid "ColorName"
+msgstr "Назва кольору"
+
+#: .\main\models.py:23 .\main\models.py:50
+#: .\templates\main\base-template.html:57 .\templates\main\index.html:22
+msgid "Color"
+msgstr "Колір"
+
+#: .\main\models.py:24 .\main\views.py:204
+#, fuzzy
+#| msgid "Color"
+msgid "Colors"
+msgstr "Кольори"
+
+#: .\main\models.py:28
+#, fuzzy
+#| msgid "Category"
+msgid "CategoryName"
+msgstr "Назва категорії"
+
+#: .\main\models.py:34 .\main\models.py:59 .\templates\main\index.html:21
+msgid "Category"
+msgstr "Категорія"
+
+#: .\main\models.py:35 .\main\views.py:158
+#: .\templates\main\base-template.html:35
+msgid "Categories"
+msgstr "Категорії"
+
+#: .\main\models.py:39 .\templates\main\index.html:20
+msgid "SKU"
+msgstr "Артикул"
+
+#: .\main\models.py:40
+msgid "Name"
+msgstr "Назва"
+
+#: .\main\models.py:54 .\templates\main\index.html:17
+msgid "Price"
+msgstr "Ціна"
+
+#: .\main\models.py:55
+msgid "Size"
+msgstr "Розмір"
+
+#: .\main\models.py:67 .\main\models.py:68
+#: .\templates\main\base-template.html:24
+msgid "Shoes"
+msgstr "Взуття"
+
+#: .\main\views.py:262
+#, fuzzy
+#| msgid "ChangeData"
+msgid "WrongData"
+msgstr "Невірні дані"
+
+#: .\main\views.py:283
+#, fuzzy
+#| msgid "Registration"
+msgid "RegistrationSuccess"
+msgstr "Реєстрація успішна"
+
+#: .\templates\auth\login.html:5 .\templates\auth\login.html:18
+#: .\templates\auth\login.html:30 .\templates\auth\register.html:36
+msgid "Login"
+msgstr "Логін"
+
+#: .\templates\auth\login.html:33
+msgid "NoAccount"
+msgstr "Немає акаунта"
+
+#: .\templates\auth\login.html:33 .\templates\auth\register.html:33
+msgid "Register"
+msgstr "Зареєструватися"
+
+#: .\templates\auth\login.html:42 .\templates\auth\register.html:48
+msgid "InputUserName"
+msgstr "Введіть ім`я користувача"
+
+#: .\templates\auth\login.html:43 .\templates\auth\register.html:50
+msgid "InputPassword"
+msgstr "Введіть пароль"
+
+#: .\templates\auth\register.html:5 .\templates\auth\register.html:13
+msgid "Registration"
+msgstr "Реєстрація"
+
+#: .\templates\auth\register.html:36
+msgid "AlreadyHaveAccount"
+msgstr "Вже є акаунт"
+
+#: .\templates\auth\register.html:49
+msgid "InputEmail"
+msgstr "Введіть email"
+
+#: .\templates\auth\register.html:51
+msgid "RepeatPassword"
+msgstr "Повторіть пароль"
+
+#: .\templates\main\add.html:5
+msgid "AddItem"
+msgstr "Додати товар"
+
+#: .\templates\main\add.html:9
+msgid "AddHeader"
+msgstr "Додати запис"
+
+#: .\templates\main\add.html:13 .\templates\main\base-template.html:46
+msgid "AddData"
+msgstr "Додати дані"
+
+#: .\templates\main\base-template.html:27
+#: .\templates\main\base-template.html:38
+#: .\templates\main\base-template.html:49
+#: .\templates\main\base-template.html:60
+msgid "Show"
+msgstr "Показати"
+
+#: .\templates\main\base-template.html:28
+#: .\templates\main\base-template.html:39
+#: .\templates\main\base-template.html:61
+msgid "Add"
+msgstr "Додати"
+
+#: .\templates\main\base-template.html:71
+msgid "Logout"
+msgstr "Вийти"
+
+#: .\templates\main\index.html:5
+msgid "Main"
+msgstr "Головна"
+
+#: .\templates\main\index.html:9
+msgid "Items"
+msgstr "Товари"
+
+#: .\templates\main\index.html:23
+msgid "AvailableSizes"
+msgstr "Доступні розміри"
+
+#: .\templates\main\index.html:26 .\templates\main\show.html:17
+msgid "Edit"
+msgstr "Змінити"
+
+#: .\templates\main\index.html:29 .\templates\main\show.html:20
+msgid "Delete"
+msgstr "Видалити"
+
+#: .\templates\main\index.html:38
+msgid "NoItems"
+msgstr "Немає товарів"
+
+#: .\templates\main\show.html:28
+msgid "DataNotFound"
+msgstr "Дані не знайдено"
+
+#: .\templates\main\update.html:5 .\templates\main\update.html:9
+msgid "UpdateItem"
+msgstr "Оновити товар"
+
+#: .\templates\main\update.html:14
+msgid "ChangeData"
+msgstr "Змінити дані"

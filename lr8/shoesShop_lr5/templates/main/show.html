@@ -1,0 +1,30 @@
+{% extends 'main/base-template.html' %}
+{% load i18n static %}
+
+{% block title %}
+{{ page_name }}
+{% endblock title %}
+
+{% block content %}
+<h3>{{ page_name }}</h3>
+{% if data %}
+<div class="row">
+    {% for item in data %}
+    <div class="col-sm-6 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ item.name }}</h5>
+                <a href="{% url entity_update_name item.id  %}" class="btn btn-success"><i class="far fa-edit mr-2"></i>{% trans 'Edit' %}</a>
+                <form action="{% url entity_delete_name item.id  %}" method="post" class="d-inline">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger"><i class="far fa-trash-alt mr-2"></i>{% trans 'Delete' %}</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endfor%}
+</div>
+{% else %}
+<h3 class="text-center alert alert-danger">{% trans 'DataNotFound' %}</h3>
+{% endif %}
+{% endblock content %}
